@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Gelats Guti - Antiu Xixona</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo/antiuxixona-recortado.png" class="img-fluid" alt="Responsive image">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+             {% if page.title == "index" %}
+                <li class="nav-item active">
+            {% else %}
+                <li class="nav-item"> 
+            {% endif %} 
+            <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+         {% if page.title == "productos" 
+                or page.title == "nuestros-sabores"  
+                or page.title == "granizados" 
+                or page.title == "bolleria" 
+                or page.title == "tostadas" 
+                or page.title == "cafeteria" 
+                or page.title == "refrescos" %}
+            <li class="nav-item active dropdown">
+          {% else %}
+            <li class="nav-item dropdown">
+          {% endif %}
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Productos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {% if page.title == "productos" %}  
+                <a class="dropdown-item active" href="productos.html">Productos</a>
+            {% else %}
+                <a class="dropdown-item" href="productos.html">Productos</a>
+            {% endif %}
+            {% if page.title == "nuestros-sabores" %}  
+                <a class="dropdown-item active" href="nuestros-sabores.html">Sabores</a>
+            {% else %}
+                <a class="dropdown-item" href="nuestros-sabores.html">Sabores</a>
+            {% endif %}
+            {% if page.title == "granizados" %}  
+                <a class="dropdown-item active" href="granizados.html">Granizados</a>
+            {% else %}
+                <a class="dropdown-item" href="granizados.html">Granizados</a>
+            {% endif %}
+            {% if page.title == "bolleria" %}  
+                <a class="dropdown-item active" href="bolleria.html">Bollería</a>
+            {% else %}
+                <a class="dropdown-item" href="bolleria.html">Bollería</a>
+            {% endif %}
+              <div class="dropdown-divider"></div>
+            {% if page.title == "bolleria" %}  
+                <a class="dropdown-item active" href="tostadas.html">Tostadas</a>
+            {% else %}
+                <a class="dropdown-item" href="tostadas.html">Tostadas</a>
+            {% endif %}
+            {% if page.title == "cafeteria" %}  
+                <a class="dropdown-item active" href="cafeteria.html">Cafetería</a>
+            {% else %}
+                <a class="dropdown-item" href="cafeteria.html">Cafetería</a>
+            {% endif %}
+            {% if page.title == "refrescos" %}  
+                <a class="dropdown-item active" href="refrescos.html">Referescos</a>
+            {% else %}
+                <a class="dropdown-item" href="refrescos.html">Referescos</a>
+            {% endif %}
+            </div>
+          </li>
+        {% if page.title == "a-domicilio" %}  
+            <li class="nav-item active">
+        {% else %}
+            <li class="nav-item">
+        {% endif %}
+            <a class="nav-link" href="a-domicilio.html">A domicilio</a>
+          </li>
+        {% if page.title == "sobre-nosotros" %}  
+            <li class="nav-item active">
+        {% else %}
+            <li class="nav-item">
+        {% endif %}
+            <a class="nav-link" href="sobre-nostros.html">Sobre nosotros</a>
+          </li>
+        {% if page.title == "ubicacion" %}  
+          <li class="nav-item active">
+        {% else %}
+          <li class="nav-item">
+        {% endif %}
+            <a class="nav-link" href="ubicacion.html">Ubicación</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="page landing-page">
+        {{ content }}
+    </main>
+
+  <footer class="page-footer font-small" style="background-color:#533014;">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/">www.gelatsgutiantiuxixona.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+      
+
+  
+ 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
